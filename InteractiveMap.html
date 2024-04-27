@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Hotspots</title>
+    <style>
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 700px; /* Adjust this value according to your desired map size */
+            margin: 0 auto; /* Center the container horizontally */
+        }
+
+            .container img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+        .hotspot {
+            position: absolute;
+            display: none;
+            width: 20px; /* Adjust the width of the hotspot */
+            height: 20px; /* Adjust the height of the hotspot */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+            border-radius: 50%; /* Rounded shape */
+            color: white; /* Text color */
+            font-size: 12px; /* Font size */
+            text-align: center; /* Center text horizontally */
+            line-height: 20px; /* Center text vertically */
+            z-index: 2; /* Ensure the hotspot is above the image */
+        }
+
+        .container:hover .hotspot {
+            display: block;
+        }
+
+        .hotspot:hover + .tooltip {
+            display: block;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            z-index: 3; /* Ensure the tooltip is above the hotspot */
+        }
+
+            .tooltip img {
+                max-width: 200px; /* Adjust tooltip size as needed */
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="Map.png" alt="Map">
+        <!-- Hotspot 1 -->
+        <div class="hotspot" style="top: 69px; left: 414px;">1</div>
+        <!-- Tooltip 1 -->
+        <div class="tooltip" style="top: 89px; left: 434px;">
+            <img src="tooltip1.png" alt="Tooltip 1">
+        </div>
+        <!-- Hotspot 2 -->
+        <div class="hotspot" style="top: 171px; left: 440px;">2</div>
+        <!-- Tooltip 2 -->
+        <div class="tooltip" style="top: 190px; left: 460px;">
+            <img src="tooltip2.png" alt="Tooltip 2">
+        </div>
+        <!-- Hotspot 3 -->
+        <div class="hotspot" style="top: 171px; left: 419px;">3</div>
+        <!-- Tooltip 3 -->
+        <div class="tooltip" style="top: 191px; left: 439px;">
+            <img src="tooltip3.png" alt="Tooltip 3">
+        </div>
+        <!-- Hotspot 4 -->
+        <div class="hotspot" style="top: 211px; left: 419px;">4</div>
+        <!-- Tooltip 4 -->
+        <div class="tooltip" style="top: 231px; left: 439px;">
+            <img src="tooltip4.png" alt="Tooltip 4">
+        </div>
+        <!-- Hotspot 5 -->
+        <div class="hotspot" style="top: 171px; left: 374px;">5</div>
+        <!-- Tooltip 5 -->
+        <div class="tooltip" style="top: 191px; left: 394px;">
+            <img src="tooltip5.png" alt="Tooltip 5">
+        </div>
+        <!-- Hotspot 6 -->
+        <div class="hotspot" style="top: 211px; left: 374px;">6</div>
+        <!-- Tooltip 6 -->
+        <div class="tooltip" style="top: 231px; left: 394px;">
+            <img src="tooltip6.png" alt="Tooltip 6">
+        </div>
+        <!-- Hotspot 7 -->
+        <div class="hotspot" style="top: 171px; left: 303px;">7</div>
+        <!-- Tooltip 7 -->
+        <div class="tooltip" style="top: 191px; left: 323px;">
+            <img src="tooltip7.png" alt="Tooltip 7">
+        </div>
+
+        <!-- Hotspot 8 -->
+        <div class="hotspot" style="top: 172px; left: 237px;">8</div>
+        <!-- Tooltip 8 -->
+        <div class="tooltip" style="top: 192px; left: 257px;">
+            <img src="tooltip8.png" alt="Tooltip 8">
+        </div>
+
+        <!-- Hotspot 9 -->
+        <div class="hotspot" style="top: 172px; left: 165px;">9</div>
+        <!-- Tooltip 9 -->
+        <div class="tooltip" style="top: 192px; left: 185px;">
+            <img src="tooltip9.png" alt="Tooltip 9">
+        </div>
+
+        <!-- Hotspot 10 -->
+        <div class="hotspot" style="top: 236px; left: 171px;">10</div>
+        <!-- Tooltip 10 -->
+        <div class="tooltip" style="top: 256px; left: 191px;">
+            <img src="tooltip10.png" alt="Tooltip 10">
+        </div>
+        <!-- Hotspot 11 -->
+        <div class="hotspot" style="top: 236px; left: 243px;">11</div>
+        <!-- Tooltip 11 -->
+        <div class="tooltip" style="top: 256px; left: 263px;">
+            <img src="tooltip11.png" alt="Tooltip 11">
+        </div>
+
+        <!-- Hotspot 12 -->
+        <div class="hotspot" style="top: 236px; left: 308px;">12</div>
+        <!-- Tooltip 12 -->
+        <div class="tooltip" style="top: 136px; left: 328px;">
+            <img src="tooltip12.png" alt="Tooltip 12">
+        </div>
+
+        <!-- Hotspot 13 -->
+        <div class="hotspot" style="top: 236px; left: 380px;">13</div>
+        <!-- Tooltip 13 -->
+        <div class="tooltip" style="top: 256px; left: 400px;">
+            <img src="tooltip13.png" alt="Tooltip 13">
+        </div>
+
+        <!-- Hotspot 14 -->
+        <div class="hotspot" style="top: 276px; left: 380px;">14</div>
+        <!-- Tooltip 14 -->
+        <div class="tooltip" style="top: 296px; left: 400px;">
+            <img src="tooltip14.png" alt="Tooltip 14">
+        </div>
+        <!-- Hotspot 15 -->
+        <div class="hotspot" style="top: 236px; left: 415px;">15</div>
+        <!-- Tooltip 15 -->
+        <div class="tooltip" style="top: 256px; left: 435px;">
+            <img src="tooltip15.png" alt="Tooltip 15">
+        </div>
+
+        <!-- Hotspot 16 -->
+        <div class="hotspot" style="top: 276px; left: 415px;">16</div>
+        <!-- Tooltip 16 -->
+        <div class="tooltip" style="top: 296px; left: 435px;">
+            <img src="tooltip16.png" alt="Tooltip 16">
+        </div>
+
+        <!-- Hotspot 17 -->
+        <div class="hotspot" style="top: 236px; left: 445px;">17</div>
+        <!-- Tooltip 17 -->
+        <div class="tooltip" style="top: 256px; left: 465px;">
+            <img src="tooltip17.png" alt="Tooltip 17">
+        </div>
+
+        <!-- Hotspot 18 -->
+        <div class="hotspot" style="top: 310px; left: 447px;">18</div>
+        <!-- Tooltip 18 -->
+        <div class="tooltip" style="top: 120px; left: 467px;">
+            <img src="tooltip18.png" alt="Tooltip 18">
+        </div>
+        <!-- Hotspot 19 -->
+        <div class="hotspot" style="top: 309px; left: 383px;">19</div>
+        <!-- Tooltip 19 -->
+        <div class="tooltip" style="top: 329px; left: 403px;">
+            <img src="tooltip19.png" alt="Tooltip 19">
+        </div>
+
+        <!-- Hotspot 20 -->
+        <div class="hotspot" style="top: 309px; left: 310px;">20</div>
+        <!-- Tooltip 20 -->
+        <div class="tooltip" style="top: 329px; left: 330px;">
+            <img src="tooltip20.png" alt="Tooltip 20">
+        </div>
+
+        <!-- Hotspot 21 -->
+        <div class="hotspot" style="top: 309px; left: 244px;">21</div>
+        <!-- Tooltip 21 -->
+        <div class="tooltip" style="top: 329px; left: 264px;">
+            <img src="tooltip21.png" alt="Tooltip 21">
+        </div>
+
+        <!-- Hotspot 22 -->
+        <div class="hotspot" style="top: 309px; left: 170px;">22</div>
+        <!-- Tooltip 22 -->
+        <div class="tooltip" style="top: 329px; left: 190px;">
+            <img src="tooltip22.png" alt="Tooltip 22">
+        </div>
+        <!-- Hotspot 23 -->
+        <div class="hotspot" style="top: 309px; left: 106px;">23</div>
+        <!-- Tooltip 23 -->
+        <div class="tooltip" style="top: 329px; left: 126px;">
+            <img src="tooltip23.png" alt="Tooltip 23">
+        </div>
+
+        <!-- Hotspot 24 -->
+        <div class="hotspot" style="top: 374px; left: 106px;">24</div>
+        <!-- Tooltip 24 -->
+        <div class="tooltip" style="top: 394px; left: 126px;">
+            <img src="tooltip24.png" alt="Tooltip 24">
+        </div>
+
+        <!-- Hotspot 25 -->
+        <div class="hotspot" style="top: 374px; left: 170px;">25</div>
+        <!-- Tooltip 25 -->
+        <div class="tooltip" style="top: 154px; left: 190px;">
+            <img src="tooltip25.png" alt="Tooltip 25">
+        </div>
+
+        <!-- Hotspot 26 -->
+        <div class="hotspot" style="top: 374px; left: 244px;">26</div>
+        <!-- Tooltip 26 -->
+        <div class="tooltip" style="top: 104px; left: 264px;">
+            <img src="tooltip26.png" alt="Tooltip 26">
+        </div>
+        <!-- Hotspot 27 -->
+        <div class="hotspot" style="top: 373px; left: 306px;">27</div>
+        <!-- Tooltip 27 -->
+        <div class="tooltip" style="top: 393px; left: 326px;">
+            <img src="tooltip27.png" alt="Tooltip 27">
+        </div>
+
+        <!-- Hotspot 28 -->
+        <div class="hotspot" style="top: 373px; left: 341px;">28</div>
+        <!-- Tooltip 28 -->
+        <div class="tooltip" style="top: 393px; left: 361px;">
+            <img src="tooltip28.png" alt="Tooltip 28">
+        </div>
+
+        <!-- Hotspot 29 -->
+        <div class="hotspot" style="top: 414px; left: 306px;">29</div>
+        <!-- Tooltip 29 -->
+        <div class="tooltip" style="top: 434px; left: 326px;">
+            <img src="tooltip29.png" alt="Tooltip 29">
+        </div>
+
+        <!-- Hotspot 30 -->
+        <div class="hotspot" style="top: 414px; left: 343px;">30</div>
+        <!-- Tooltip 30 -->
+        <div class="tooltip" style="top: 434px; left: 363px;">
+            <img src="tooltip30.png" alt="Tooltip 30">
+        </div>
+        <!-- Hotspot 31 -->
+        <div class="hotspot" style="top: 373px; left: 379px;">31</div>
+        <!-- Tooltip 31 -->
+        <div class="tooltip" style="top: 393px; left: 399px;">
+            <img src="tooltip31.png" alt="Tooltip 31">
+        </div>
+
+        <!-- Hotspot 32 -->
+        <div class="hotspot" style="top: 373px; left: 446px;">32</div>
+        <!-- Tooltip 32 -->
+        <div class="tooltip" style="top: 393px; left: 466px;">
+            <img src="tooltip32.png" alt="Tooltip 32">
+        </div>
+
+        <!-- Hotspot 33 -->
+        <div class="hotspot" style="top: 445px; left: 476px;">33</div>
+        <!-- Tooltip 33 -->
+        <div class="tooltip" style="top: 125px; left: 496px;">
+            <img src="tooltip33.png" alt="Tooltip 33">
+        </div>
+
+        <!-- Hotspot 34 -->
+        <div class="hotspot" style="top: 445px; left: 447px;">34</div>
+        <!-- Tooltip 34 -->
+        <div class="tooltip" style="top: 465px; left: 467px;">
+            <img src="tooltip34.png" alt="Tooltip 34">
+        </div>
+        <!-- Hotspot 35 -->
+        <div class="hotspot" style="top: 483px; left: 447px;">35</div>
+        <!-- Tooltip 35 -->
+        <div class="tooltip" style="top: 403px; left: 467px;">
+            <img src="tooltip35.png" alt="Tooltip 35">
+        </div>
+
+        <!-- Hotspot 36 -->
+        <div class="hotspot" style="top: 483px; left: 478px;">36</div>
+        <!-- Tooltip 36 -->
+        <div class="tooltip" style="top: 503px; left: 498px;">
+            <img src="tooltip36.png" alt="Tooltip 36">
+        </div>
+
+        <!-- Hotspot 37 -->
+        <div class="hotspot" style="top: 445px; left: 383px;">37</div>
+        <!-- Tooltip 37 -->
+        <div class="tooltip" style="top: 465px; left: 403px;">
+            <img src="tooltip37.png" alt="Tooltip 37">
+        </div>
+
+        <!-- Hotspot 38 -->
+        <div class="hotspot" style="top: 510px; left: 447px;">38</div>
+        <!-- Tooltip 38 -->
+        <div class="tooltip" style="top: 500px; left: 467px;">
+            <img src="tooltip38.png" alt="Tooltip 38">
+        </div>
+
+        <!-- Hotspot 39 -->
+        <div class="hotspot" style="top: 510px; left: 380px;">39</div>
+        <!-- Tooltip 39 -->
+        <div class="tooltip" style="top: 450px; left: 400px;">
+            <img src="tooltip39.png" alt="Tooltip 39">
+        </div>
+
+        <!-- Hotspot 40 -->
+        <div class="hotspot" style="top: 446px; left: 305px;">40</div>
+        <!-- Tooltip 40 -->
+        <div class="tooltip" style="top: 466px; left: 325px;">
+            <img src="tooltip40.png" alt="Tooltip 40">
+        </div>
+    </div>
+
+</body>
+</html>
